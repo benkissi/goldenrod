@@ -1,0 +1,30 @@
+<template name = 'accounts'>
+	<div class="accounts-container">
+		<!-- Default panel contents -->
+		<!-- <div class="panel-heading ">Accounts</div> -->
+
+		<!-- Table -->
+		<div >
+		<table class="table container text-center">
+				<tr class ="tHeading">
+					<td>Account Number</td>
+					<td>Account Name</td>
+					<td>Total</td>
+					<td>Date Created</td>
+					<td></td>
+				</tr>
+
+				{{#each acounts}}
+				<tr class = "entry">
+					<td>{{accountNumber}}</td>
+					<td>{{accountName}}</td>
+					<td>{{accountTotal}}</td>
+					<td>{{accountDate}}</td>
+					<td><a href = "{{pathFor 'accountPage'}}" class="discuss btn btn-default"> View</a>
+					<a href="{{pathFor 'accountEdit'}}" class="discuss btn btn-primary">Edit</a></td>
+				</tr>
+				{{/each}}
+			</table>
+		</div>
+	</div>
+</template>

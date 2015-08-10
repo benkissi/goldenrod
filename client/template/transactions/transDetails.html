@@ -1,0 +1,48 @@
+<template name='transDetails'>
+	<div class="accounts-container">
+		<!-- Default panel contents -->
+		<!-- <div class="panel-heading ">Accounts</div> -->
+
+		<!-- Table -->
+		<div >
+			<h1 class = "text-center">Transaction Details</h1>
+			<div class = "row">
+				<div class = "container col-lg-12">
+					<div class = "col-lg-3"><img class ="imageHolder" src = ""></div>
+					<div class = "col-lg-9 details">
+						<div class= "col-lg-4">
+							<h4>Account Number</h4><span>{{accountNumber}}</span>
+							<h4>Account Name</h4><span>{{accountName}}</span>
+						</div>
+						<div class= "col-lg-4">
+							<h4>Transaction Type</h4><span>{{transactionType}}</span>
+							<h4>Transaction Date</h4><span>{{transactionDate}}</span>
+						</div>
+						<div class = "col-lg-4">
+							<h4>Transaction Amount</h4><span>{{transactionAmount}}</span>
+							<h4>Balance</h4><span>{{balance}}</span>
+						</div>
+
+					</div>
+				</div>
+			</div>	
+			<div class = "row">
+				<div class = "container col-lg-12">
+				<div class ="col-lg-3"></div>
+					<div class="col-lg-9">
+						<div class= "col-lg-4">
+							<h4>Attendant</h4><span>{{author}}</span>
+							
+						</div>
+						<div class= "col-lg-4">
+							
+							<h4>System Date</h4><span>{{submitted}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</template>

@@ -1,0 +1,34 @@
+<template name = 'transactions'>
+	<div class="accounts-container">
+		<!-- Default panel contents -->
+		<!-- <div class="panel-heading ">Accounts</div> -->
+
+		<!-- Table -->
+		<div >
+		<table class="table container text-center">
+				<tr class ="tHeading">
+					<td>Transaction Date</td>
+					<td>Account Number</td>
+					<td>Account Name</td>
+					<td>Transaction Type</td>
+					<td>Transaction Amount</td>
+					<td>Account Balance</td>
+					<td></td>
+				</tr>
+
+				{{#each transactions}}
+				<tr class = "entry">
+					<td>{{transactionDate}}</td>
+					<td>{{accountNumber}}</td>
+					<td>{{accountName}}</td>
+					<td>{{transactionType}}</td>
+					<td>{{transactionAmount}}</td>
+					<td>{{balance}}</td>
+					<td><a href = "{{pathFor 'transDetails'}}" class="discuss btn btn-default"> Details</a>
+					</td>
+				</tr>
+				{{/each}}
+			</table>
+		</div>
+	</div>
+</template>

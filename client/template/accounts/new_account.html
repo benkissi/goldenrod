@@ -1,0 +1,59 @@
+<template name="newAccount">
+	<div class="accounts-container">
+		<form class="main form">
+			<div class="form-group {{errorClass 'accountName'}}">
+			<label class="control-label" for="accountName">Account Name</label>
+				<div class="controls">
+					<input name="accountName" id="url" type="text" value="" placeholder="Account Name" class="form-control"/>
+					<span class="help-block">{{errorMessage 'accountName'}}</span>
+				</div>
+			</div> 
+			<div class="form-group {{errorClass 'accountNumber'}}">
+				<label class="control-label" for="accountNumber">Account Number</label>
+				<div class="controls">
+					<input name="accountNumber" id="title" type="text" value="" placeholder="Account Number" class="form-control"/>
+					<span class="help-block">{{errorMessage 'accountNumber'}}</span>
+				</div>
+			</div>
+			<div class="form-group {{errorClass 'accountTotal'}}">
+				<label class="control-label" for="amount">Initial Amount (GHC)</label>
+				<div class="controls">
+					<input name="amount" id="title" type="number" value="" placeholder="Initial Amount" class="form-control"/>
+					<span class="help-block">{{errorMessage 'accountTotal'}}</span>
+				</div>
+			</div>
+			<div class="form-group {{errorClass 'dateCreated'}}">
+				<label class="control-label" for="dateCreated">Date Created</label>
+				<div class="controls">
+					<input name="dateCreated" id="title" type="text" value="" placeholder="Date Created" class="form-control"/>
+					<span class="help-block">{{errorMessage 'dateCreated'}}</span>
+				</div>
+			</div>
+			<div class="form-group {{errorClass 'idType'}}">
+				<label class="control-label" for="idType">Id Type</label>
+				<div class="controls">
+					<input name="idType" id="title" type="text" value="" placeholder="Type of Identification" class="form-control"/>
+					<span class="help-block">{{errorMessage 'idType'}}</span>
+				</div>
+			</div>
+			<div class="form-group {{errorClass 'idNumber'}}">
+				<label class="control-label" for="idNumber">Id Number</label>
+				<div class="controls">
+					<input name="idNumber" id="title" type="text" value="" placeholder="Id Number" class="form-control"/>
+					<span class="help-block">{{errorMessage 'idNumber'}}</span>
+				</div>
+			</div> 
+			<div class="form-group {{errorClass 'picture'}}">
+				<label class="control-label" for="Picture">Picture</label>
+				<div class="controls">
+				<span class="btn btn-default btn-file">
+					<input name="pic" id="title" type="file" value="" placeholder="Picture" class="file fileInput "/>
+					<span class="help-block">{{errorMessage 'picture'}}</span>
+				</span>
+				</div>
+				
+			</div>
+			<input type="submit" value="Submit" class="btn btn-primary"/>
+		</form>
+	</div>
+</template>

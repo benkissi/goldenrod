@@ -1,0 +1,76 @@
+.table{
+	margin-top: 10px;
+}
+.details{
+	border-left: 1px solid #eee;
+	height: 200px;
+}
+.tHeading{
+	margin:10px;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+}
+
+.entry{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 5px;
+}
+.imageHolder{
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+body {
+	background: #eee;
+	color: #666666; 
+}
+
+.yield{
+	width: 100%;
+}
+
+.heading{
+	font-size: 20px;
+}
+
+.nice-blue{
+	color:#0c84e4
+}
+.debit-credit{
+	
+}
+#login-username{
+	color: #666666;
+}
+
+#login-password{
+	color: #666666;
+}
+#login-password-again{
+	color: #666666;
+}
+.accounts-container{
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+

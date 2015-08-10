@@ -1,0 +1,51 @@
+<template name="accountEdit">
+	<div class="accounts-container">
+		<form class="main form">
+			<div class="form-group">
+			<label class="control-label" for="accountName">Account Name</label>
+				<div class="controls">
+					<input name="accountName" id="url" type="text" value="{{accountName}}" placeholder="Account Name" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="accountName">Account Number</label>
+				<div class="controls">
+					<input name="accountNumber" id="title" type="text" value="{{accountNumber}}" placeholder="Account Number" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="amount">Initial Amount (GHC)</label>
+				<div class="controls">
+					<input name="amount" id="title" type="number" value="{{accountTotal}}" placeholder="Initial Amount" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="dateCreated">Date Created</label>
+				<div class="controls">
+					<input name="dateCreated" id="title" type="text" value="{{dateCreated}}" placeholder="Date Created" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="idType">Id Type</label>
+				<div class="controls">
+					<input name="idType" id="title" type="text" value="{{idType}}" placeholder="Type of Identification" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="idNumber">Id Number</label>
+				<div class="controls">
+					<input name="idNumber" id="title" type="text" value="{{idNumber}}" placeholder="Id Number" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="Picture">Picture</label>
+				<div class="controls">
+					<input name="pic" id="title" type="text" value="{{picture}}" placeholder="Picture" class="form-control"/>
+				</div>
+			</div>
+			<input type="submit" value="Submit" class="btn btn-primary"/>
+			<hr/>
+<a class="btn btn-danger delete" href="#">Delete post</a>
+		</form>
+	</div>
+</template>

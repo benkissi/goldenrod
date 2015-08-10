@@ -1,0 +1,64 @@
+<template name="accountPage">
+	<div class="container accounts-container ">
+		<!-- Default panel contents -->
+		<!-- <div class="panel-heading ">Accounts</div> -->
+
+		<!-- Table -->
+		
+			<h1 class = "text-center">Account</h1>
+			<div class = "row">
+				<div class = "container col-lg-12">
+					<div class = "container col-lg-3"><img class ="imageHolder" src = "{{picture}}"></div>
+					<div class = "container col-lg-9 details">
+						<div class= "container col-lg-4">
+							<h4>Account Number</h4><span>{{accountNumber}}</span>
+							<h4>Account Name</h4><span>{{accountName}}</span>
+						</div>
+						<div class= "container col-lg-4">
+							<h4>Account Total</h4><span>{{accountTotal}}</span>
+							<h4>Date Created</h4><span>{{dateCreated}}</span>
+						</div>
+						<div class = "container col-lg-4">
+							<h4>Id Type</h4><span>{{idType}}</span>
+							<h4>Id Number</h4><span>{{idNumber}}</span>
+						</div>
+						<a href = "{{pathFor 'statement'}}" class="discuss btn btn-inverse"> Generate Statement</a>
+					
+					</div>
+				</div>
+			</div>
+				
+			<div class = "row ">
+				<div class = "container">
+				<div class ="text-center">
+					<button class="btn btn-default debit-credit" href="#"><h4 class = "text-center">Debit/Credit Account</h4></button>
+				</div>
+				<div class="container d-c col-lg-12">
+					<form class=" form">
+						<div class="form-group {{errorClass 'transactionAmount'}}">
+							<label class="control-label" for="amount">Amount</label>
+							<div class="controls">
+								<input name="transactionAmount" id="url" type="text" value="" placeholder="Amount" class="form-control transactionAmount"/>
+								<span class="help-block">{{errorMessage 'transactionAmount'}}</span>
+							</div>
+						</div>
+						<div class="form-group {{errorClass 'transactionDate'}}">
+							<label class="control-label" for="transactionDate">Transaction Date</label>
+							<div class="controls">
+								<input name="transactionDate" id="transDate" type="text" value="" placeholder="dd/mm/yyyy" class="form-control"/>
+								<span class="help-block">{{errorMessage 'transactionDate'}}</span>
+							</div>
+						</div>
+						<div class = "col-lg-6 text-center">
+							<input type="submit" value="Credit" class="btn btn-primary"/>
+						</div>
+						<div class="col-lg-6 text-center">
+							<button class="btn btn-danger debit" href="#">Debit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+		
+	</div>
+</template>
