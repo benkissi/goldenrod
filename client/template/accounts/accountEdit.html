@@ -22,7 +22,7 @@
 			<div class="form-group">
 				<label class="control-label" for="dateCreated">Date Created</label>
 				<div class="controls">
-					<input name="dateCreated" id="title" type="text" value="{{dateCreated}}" placeholder="Date Created" class="form-control"/>
+					<input name="dateCreated" id="title" type="text" value="{{dateCreated}}" placeholder="Date Created" class="form-control my-datepicker"/>
 				</div>
 			</div>
 			<div class="form-group">
@@ -37,11 +37,15 @@
 					<input name="idNumber" id="title" type="text" value="{{idNumber}}" placeholder="Id Number" class="form-control"/>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group {{errorClass 'picture'}}">
 				<label class="control-label" for="Picture">Picture</label>
 				<div class="controls">
-					<input name="pic" id="title" type="text" value="{{picture}}" placeholder="Picture" class="form-control"/>
+				<span class="btn btn-default btn-file">
+					<input name="picture" id="title" type="file" value="" placeholder="Picture" class="file fileInput "/>
+					<span class="help-block">{{errorMessage 'picture'}}</span>
+				</span>
 				</div>
+				
 			</div>
 			<input type="submit" value="Submit" class="btn btn-primary"/>
 			<hr/>

@@ -9,11 +9,18 @@ Template.header.events({
 		e.preventDefault();
 
 		var searchInput = $(e.target).find('[name = searchInput]').val();
-		var found = Acounts.findOne({accountNumber: searchInput});
-		var _id = found._id
-		console.log(_id);
+		if (searchInput !== ""){
+			var found = Acounts.findOne({accountNumber: searchInput});
+			
+			var id = found._id;
+			Router.go('accountPage', {_id:id});
+		} else {
+			return Errors.throw("Please input an account number");
+		}
+		
+		
 
-		Router.go('accountPage', {_id: _id});
+		
 		
 	}
 })

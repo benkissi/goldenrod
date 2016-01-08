@@ -5,6 +5,12 @@ Template.accountPage.rendered = function(){
 Template.accountPage.created = function() {
 	Session.set('transactionSubmitErrors', {});
 }
+Template.newAccount.rendered = function(){
+	$('.datepicker').datepicker({
+		format: 'dd/mm/yyyy',
+		startDate: '-3d'
+	})
+}
 
 
 Template.accountPage.helpers({
@@ -95,13 +101,13 @@ Template.accountPage.events({
 				if (error) {
 				// display the error to the user
 				alert(error.reason);
-				} else {
-					Router.go('accountPage', {_id: currentAccountId});
-					error = {};
-					return Session.set('transactionSubmitErrors', errors);
-					
-				}
-			});
+			} else {
+				Router.go('accountPage', {_id: currentAccountId});
+				error = {};
+				return Session.set('transactionSubmitErrors', errors);
+
+			}
+		});
 		}
 
 		Meteor.call('transactionInsert', transaction, function(error, result) {

@@ -1,41 +1,47 @@
 <template name = 'statement'>
-	<div class="accounts-container">
+	<div class="accounts-container container">
 		<!-- Default panel contents -->
 		<!-- <div class="panel-heading ">Accounts</div> -->
 
 		<!-- Table -->
-		<div >
 		<h4 class = 'heading text-center'>STATEMENT</h4>
-		<div class = "col-lg-4">
-			<h6 class = "nice-blue">Summary of Transactions</h6>
-			<p>Account Name: <p class=" account-name"></p></p>
-			<p>Account Number: <p class=" account-number"></p></p>
-			<p>Generated on: <p class=" date"></p></p>
+		<div class = "row">
+			
+			<div class = "col-lg-6">
+				<h6 class = "nice-blue">Summary of Transactions</h6>
+				<p>Account Name: <span id = "account-name"></span></p>
+				<p>Account Number: <span id = "account-number"></span></p>
+				<p>Generated on: </p> <p class=" date"></p>
+			</div>
+			<div class = "col-lg-6 text-center">
+				<img class ="logo" src = "/logo">
+				<h4>GoldenRod Ventures</h4>
+			</div>
 		</div>
 		<table class="table container text-center">
-				<tr class ="tHeading">
-					<td>Transaction Date</td>
-					<td>Account Number</td>
-					<td>Account Name</td>
-					<td>Transaction Type</td>
-					<td>Transaction Amount</td>
-					<td>Account Balance</td>
-					<td></td>
-				</tr>
+			<tr class ="tHeading">
+				<td>Transaction Date</td>
+				<td>Account Number</td>
+				<td>Account Name</td>
+				<td>Transaction Type</td>
+				<td>Transaction Amount</td>
+				<td>Account Balance</td>
+				<td></td>
+			</tr>
 
-				{{#each transactions}}
-				<tr class = "entry">
-					<td>{{transactionDate}}</td>
-					<td>{{accountNumber}}</td>
-					<td class = "the-name">{{accountName}}</td>
-					<td>{{transactionType}}</td>
-					<td>{{transactionAmount}}</td>
-					<td>{{balance}}</td>
+			{{#each transactions}}
+			<tr class = "entry">
+				<td>{{transactionDate}}</td>
+				<td>{{accountNumber}}</td>
+				<td>{{accountName}}</td>
+				<td>{{transactionType}}</td>
+				<td>{{transactionAmount}}</td>
+				<td>{{balance}}</td>
 					<!-- <td><a href = "{{pathFor 'transDetails'}}" class="discuss btn btn-default"> Details</a>
-					</td> -->
-				</tr>
-				{{/each}}
-			</table>
-		</div>
+				</td> -->
+			</tr>
+			{{/each}}
+		</table>
+		
 	</div>
 </template>

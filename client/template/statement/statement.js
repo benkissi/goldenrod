@@ -5,7 +5,8 @@ Template.statement.helpers({
 })
 
 Template.statement.rendered = function () {
-	var name = $(".entry .the-name 0-child").val();
-	console.log(name);
-	$('.account-name').val(name)
+	var number = Router.current().params['accountNumber'];
+	var name = Transactions.findOne({accountNumber: number}).accountName;
+	$('#account-name').text(name);
+	$('#account-number').text(number);
 };
