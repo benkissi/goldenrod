@@ -53,7 +53,9 @@ Template.accountPage.events({
 			Acounts.update(currentAccountId, {$set: credit}, function(error) {
 				if (error) {
 					// display the error to the user
+					
 					alert(error.reason);
+
 				} else {
 					Router.go('accountPage', {_id: currentAccountId});
 					error = {};
