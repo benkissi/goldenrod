@@ -1,5 +1,6 @@
 Template.transactions.helpers({
 	transactions : function(){
-		return Transactions.find({}, {sort: {submitted: -1}});
+    var user = Meteor.userId();
+		return Transactions.find({userId: user}, {sort: {submitted: -1}});
 	}	
 })

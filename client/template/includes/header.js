@@ -1,7 +1,7 @@
 Template.header.helpers({
-	acounts : function(){
-		return Acounts.find({}, {sort: {submitted: -1}});
-	}
+  accountsExist: function () {
+    return Acounts.find({userId: Meteor.userId()}).count() > 0;
+  }
 });
 
 Template.header.events({
@@ -17,10 +17,6 @@ Template.header.events({
 		} else {
 			return Errors.throw("Please input an account number");
 		}
-		
-		
-
-		
 		
 	}
 })

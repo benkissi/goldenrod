@@ -32,7 +32,12 @@
 			<div class="form-group {{errorClass 'idType'}}">
 				<label class="control-label" for="idType">Id Type</label>
 				<div class="controls">
-					<input name="idType" id="title" type="text" value="" placeholder="Type of Identification" class="form-control"/>
+					<select class="form-control">
+					  <option value="passport">Passport</option>
+					  <option value="nhis">NHIS</option>
+					  <option value="voter">Voter's ID</option>
+					  <option value="driver">Driver's License</option>
+				  </select>
 					<span class="help-block">{{errorMessage 'idType'}}</span>
 				</div>
 			</div>

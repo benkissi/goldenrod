@@ -1,8 +1,7 @@
 Template.accounts.helpers({
-	acounts : function(){
-		return Acounts.find({}, {sort: {submitted: -1}});
+  acounts : function(){
+    var user = Meteor.userId();
+		return Acounts.find({userId: user}, {sort: {submitted: -1}});
 	}
 });
-
-
 

@@ -10,25 +10,31 @@
 			<div class="form-group">
 				<label class="control-label" for="accountName">Account Number</label>
 				<div class="controls">
-					<input name="accountNumber" id="title" type="text" value="{{accountNumber}}" placeholder="Account Number" class="form-control"/>
+					<input name="accountNumber" id="title" type="text" value="{{accountNumber}}" placeholder="Account Number" class="form-control" disabled/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="amount">Initial Amount (GHC)</label>
 				<div class="controls">
-					<input name="amount" id="title" type="number" value="{{accountTotal}}" placeholder="Initial Amount" class="form-control"/>
+					<input name="amount" id="title" type="number" value="{{accountTotal}}" placeholder="Initial Amount" class="form-control" disabled/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="dateCreated">Date Created</label>
 				<div class="controls">
-					<input name="dateCreated" id="title" type="text" value="{{dateCreated}}" placeholder="Date Created" class="form-control my-datepicker"/>
+					<input name="dateCreated" id="title" type="text" value="{{dateCreated}}" placeholder="Date Created" class="form-control my-datepicker" disabled/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="idType">Id Type</label>
 				<div class="controls">
-					<input name="idType" id="title" type="text" value="{{idType}}" placeholder="Type of Identification" class="form-control"/>
+					<!-- <input list="idtypes" name="idType" id="title" type="text" value="{{idType}}" placeholder="Type of Identification" /> -->
+					<select class="form-control">
+					  <option value="passport">Passport</option>
+					  <option value="nhis">NHIS</option>
+					  <option value="voter">Voter's ID</option>
+					  <option value="driver">Driver's License</option>
+				</select>
 				</div>
 			</div>
 			<div class="form-group">
