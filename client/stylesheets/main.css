@@ -82,11 +82,16 @@ body {
 .logo{
 	width: 80px;
 	height: 80px;
+	border-radius: 5%;
+}
+
+.mainlogo{
+	border-radius: 10%;
 }
 
 .main{
 	min-height: 385px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .main-list > li{
@@ -94,6 +99,7 @@ body {
 	padding-left: 25px;
 }
 
-.main-list > li > h4 + span{
-	color:#c0c0c0;
+.huey{
+	color:#F8F8FF;
 }
+
