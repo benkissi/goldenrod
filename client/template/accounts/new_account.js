@@ -64,7 +64,7 @@ Template.newAccount.events({
 
 		var errors = validateAccount(account);
 		if (errors.accountName||errors.accountNumber||errors.accountTotal||errors.dateCreated
-			||errors.idType||errors.idNumber||errors.picture)
+			||errors.idNumber||errors.picture)
 			return Session.set('accountSubmitErrors', errors);
 
 		Meteor.call('accountsInsert', account, function(error, result) {
