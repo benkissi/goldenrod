@@ -1,0 +1,75 @@
+<template name="adminAccount">
+{{#if adminDisplay}}
+  <div class="accounts-container" style={{adminDisplay}}>
+    <!-- Table -->
+    <table class="table container text-center">
+    <div class="panel-heading ">Customers</div>
+        <tr class ="tHeading">
+          <td>Username</td>
+        </tr>
+        {{#each customerUsers}}
+        <tr class = "entry">
+          <td>{{username}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+  <br>
+  <div class="accounts-container">
+    <table class="table container text-center">
+    <div class="panel-heading ">Transactions</div>
+        <tr class ="tHeading">
+          <td>Account Name</td>
+          <td>User Name</td>
+          <td>Account Number</td>
+          <td>Balance</td>
+          <td>Transaction Type</td>
+          <td>Transaction Date</td>
+        </tr>
+        {{#each customerTransactions}}
+        <tr class = "entry">
+          <td>{{accountName}}</td>
+          <td>{{author}}</td>
+          <td>{{accountNumber}}</td>
+          <td>{{balance}}</td>
+          <td>{{transactionType}}</td>
+          <td>{{submitted}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+  <br>
+  <div class="accounts-container">
+    <table class="table container text-center">
+    <div class="panel-heading ">Accounts</div>
+        <tr class ="tHeading">
+          <td>Account Name</td>
+          <td>Author</td>
+          <td>Id Type</td>
+          <td>Id Number</td>
+          <td>Account Number</td>
+          <td>Date Created</td>
+        </tr>
+        {{#each customerAccounts}}
+        <tr class = "entry">
+          <td>{{accountName}}</td>
+          <td>{{author}}</td>
+          <td>{{idType}}</td>
+          <td>{{idNumber}}</td>
+          <td>{{accountNumber}}</td>
+          <td>{{dateCreated}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{else}}
+<div class="container">
+  <div class="row">
+     <h3 class="text-center well">Administrator only.</h3>
+     {{adminDisplay}}
+     <hr>
+  </div>
+</div>
+    
+{{/if}}
+</template>

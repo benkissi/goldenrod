@@ -19,4 +19,4 @@ Template.header.events({
 		}
 		
 	}
-})
+});
